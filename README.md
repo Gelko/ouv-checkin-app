@@ -1,59 +1,96 @@
-# OuvCheckinApp
+# OUV Check-in App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+An online briefing and check-in system for the Oravska Ultra Vyzva ultramarathon race. This application guides participants through important race information and collects their acknowledgment and contact details.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Multi-step briefing process
+- Required quiz questions to ensure information comprehension
+- Responsive design for all devices
+- Contact information collection
+- Email notification system
 
+## Prerequisites
+
+- Node.js (v18 or higher)
+- npm (v9 or higher)
+- Angular CLI (v17 or higher)
+
+## Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/ouv-checkin-app.git
+cd ouv-checkin-app
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Create a `.env` file in the root directory with your email service configuration:
+```
+API_URL=your_api_url
+EMAIL_SERVICE_KEY=your_email_service_key
+```
+
+4. Add your background images to the `public/assets/images` directory:
+- welcome-bg.jpg
+- route-bg.jpg
+- dropbag-bg.jpg
+- equipment-bg.jpg
+- start-bg.jpg
+- submit-bg.jpg
+
+5. Add your logo:
+- Add `logo.png` to `public/assets/images`
+
+## Development
+
+Run the development server:
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+## Building for Production
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Deployment
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+1. Build the application for production
+2. Deploy the contents of the `dist/ouv-checkin-app` directory to your web server
+3. Configure your web server to handle the email submission endpoint at `/api/submit`
 
-```bash
-ng test
+## Email Service Integration
+
+The application is configured to send emails to contact@ouv.sk. To set up the email service:
+
+1. Create an API endpoint at `/api/submit`
+2. Configure the endpoint to accept POST requests with the following data structure:
+```typescript
+{
+  to: string;
+  subject: string;
+  body: string;
+}
 ```
 
-## Running end-to-end tests
+## Contributing
 
-For end-to-end (e2e) testing, run:
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-```bash
-ng e2e
-```
+## License
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project is licensed under the MIT License - see the LICENSE file for details.
