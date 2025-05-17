@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { StepLayoutComponent } from '../step-layout/step-layout.component';
 import { BaseStepComponent } from '../base-step/base-step.component';
 import { Router } from '@angular/router';
@@ -8,12 +7,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-route',
   standalone: true,
-  imports: [CommonModule, FormsModule, StepLayoutComponent],
+  imports: [CommonModule, StepLayoutComponent],
   template: `
     <app-step-layout
       title="Trasa"
       [backgroundImage]="'/assets/images/route-bg.jpg'"
-      [isValid]="isValid"
+      [isValid]="true"
       (onNext)="goToNext()"
       (onPrev)="goToPrev()"
     >
@@ -28,46 +27,6 @@ import { Router } from '@angular/router';
           <div class="station">4. Oravský Podzámok 85km</div>
           <div class="station">5. Príslop 102km</div>
           <div class="station">6. Tvrdošín (cieľ) 124km</div>
-        </div>
-
-        <div class="quiz-section">
-          <h3>Otázka:</h3>
-          <p>Ako sa volá 4. občerstvovacia stanica?</p>
-          
-          <div class="radio-group">
-            <label>
-              <input 
-                type="radio" 
-                name="station" 
-                [value]="'huty'"
-                [(ngModel)]="selectedAnswer"
-                (change)="validateStep()"
-              >
-              Huty
-            </label>
-            
-            <label>
-              <input 
-                type="radio" 
-                name="station" 
-                [value]="'oravsky_podzamok'"
-                [(ngModel)]="selectedAnswer"
-                (change)="validateStep()"
-              >
-              Oravský Podzámok
-            </label>
-            
-            <label>
-              <input 
-                type="radio" 
-                name="station" 
-                [value]="'prislop'"
-                [(ngModel)]="selectedAnswer"
-                (change)="validateStep()"
-              >
-              Príslop
-            </label>
-          </div>
         </div>
       </div>
     </app-step-layout>
@@ -90,31 +49,6 @@ import { Router } from '@angular/router';
       border-radius: 4px;
     }
 
-    .quiz-section {
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(44, 62, 80, 0.2);
-    }
-
-    .radio-group {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    label {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      cursor: pointer;
-    }
-
-    input[type="radio"] {
-      width: 1.2rem;
-      height: 1.2rem;
-    }
-
     @media (max-width: 768px) {
       .route-content {
         font-size: 1rem;
@@ -123,15 +57,10 @@ import { Router } from '@angular/router';
   `]
 })
 export class RouteComponent extends BaseStepComponent {
-  selectedAnswer: string = '';
-
   constructor(router: Router) {
     super(router);
-    this.nextRoute = '/dropbag';
+    this.nextRoute = '/gpx';
     this.prevRoute = '/';
-  }
-
-  override validateStep() {
-    this.isValid = this.selectedAnswer === 'oravsky_podzamok';
+    this.isValid = true;
   }
 } 

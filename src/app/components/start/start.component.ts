@@ -21,30 +21,6 @@ import { Router } from '@angular/router';
           <p>Štart pretekov je 14.6.2025 o 04:00 na námestí v Tvrdošíne.</p>
           <p>Je potrebné prísť najneskôr 15 minút pred štartom kvôli prevzatiu GPS trackera a spoločnej fotke.</p>
         </div>
-
-        <div class="map-section">
-          <h3>Miesto štartu:</h3>
-          <div class="map-container">
-            <iframe
-              width="100%"
-              height="400"
-              style="border:0"
-              loading="lazy"
-              allowfullscreen
-              referrerpolicy="no-referrer-when-downgrade"
-              [src]="mapUrl"
-            ></iframe>
-          </div>
-        </div>
-
-        <div class="additional-info">
-          <h3>Dôležité informácie:</h3>
-          <ul>
-            <li>Prezentácia začína 45 minút pred štartom</li>
-            <li>Parkovanie je možné na priľahlých uliciach</li>
-            <li>Toalety budú k dispozícii v blízkosti štartu</li>
-          </ul>
-        </div>
       </div>
     </app-step-layout>
   `,

@@ -8,12 +8,6 @@ import { RouterOutlet } from '@angular/router';
   imports: [CommonModule, RouterOutlet],
   template: `
     <div class="layout">
-      <img 
-        [class.centered]="isCenteredLogo" 
-        src="/assets/images/logo.png" 
-        alt="OUV Logo" 
-        class="logo"
-      />
       <main>
         <router-outlet></router-outlet>
       </main>
