@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   imports: [CommonModule, StepLayoutComponent],
   template: `
     <app-step-layout
-      title="Start"
+      title="Štart"
       [backgroundImage]="'/assets/images/start-bg.jpg'"
       [isValid]="true"
       (onNext)="goToNext()"
@@ -18,7 +18,7 @@ import { Router } from '@angular/router';
     >
       <div class="start-content">
         <div class="info-box">
-          <p>Start pretekov je 14.6.2025 o 04:00 na námestí v Tvrdošíne.</p>
+          <p>Štart pretekov je 14.6.2025 o 04:00 na námestí v Tvrdošíne.</p>
           <p>Je potrebné prísť najneskôr 15 minút pred štartom kvôli prevzatiu GPS trackera a spoločnej fotke.</p>
         </div>
 

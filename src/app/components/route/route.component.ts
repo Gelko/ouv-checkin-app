@@ -18,21 +18,21 @@ import { Router } from '@angular/router';
       (onPrev)="goToPrev()"
     >
       <div class="route-content">
-        <p>Trasa Oravskej Ultra Vyzvy ma 124km s prevýšením 6400m.</p>
-        <p>Na trase bude 5 obcerstvovacich stanic.</p>
+        <p>Trasa Oravskej Ultra Výzvy má 124km s prevýšením 6400m.</p>
+        <p>Na trase bude 5 občerstvovacích staníc.</p>
         
         <div class="stations">
-          <div class="station">1. Oravice 19.5km</div>
+          <div class="station">1. Oravice 19,5km</div>
           <div class="station">2. Ťatliakova chata 36km</div>
           <div class="station">3. Huty 58km</div>
-          <div class="station">4. Oravsky podzamok 85km</div>
-          <div class="station">5. Prislop 102km</div>
-          <div class="station">6. Tvrdosin (ciel) 124km</div>
+          <div class="station">4. Oravský Podzámok 85km</div>
+          <div class="station">5. Príslop 102km</div>
+          <div class="station">6. Tvrdošín (cieľ) 124km</div>
         </div>
 
         <div class="quiz-section">
           <h3>Otázka:</h3>
-          <p>Ako sa vola 4 obcerstvovacia stanica?</p>
+          <p>Ako sa volá 4. občerstvovacia stanica?</p>
           
           <div class="radio-group">
             <label>
@@ -54,7 +54,7 @@ import { Router } from '@angular/router';
                 [(ngModel)]="selectedAnswer"
                 (change)="validateStep()"
               >
-              Oravsky podzamok
+              Oravský Podzámok
             </label>
             
             <label>
@@ -65,7 +65,7 @@ import { Router } from '@angular/router';
                 [(ngModel)]="selectedAnswer"
                 (change)="validateStep()"
               >
-              Prislop
+              Príslop
             </label>
           </div>
         </div>

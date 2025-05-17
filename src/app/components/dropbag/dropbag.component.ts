@@ -18,8 +18,8 @@ import { Router } from '@angular/router';
     >
       <div class="dropbag-content">
         <div class="info-box">
-          <p>Dropbag je potrebne odovzdat organizatorovi pred ubytovanim, alebo na starte pretekov.</p>
-          <p>Dropbag Vas bude cakat na obcerstovacke Huty (58km)</p>
+          <p>Dropbag je potrebné odovzdať organizátorovi pred ubytovaním, alebo na štarte pretekov.</p>
+          <p>Dropbag Vás bude čakať na občerstvovacej stanici Huty (58km)</p>
         </div>
 
         <div class="tips">
